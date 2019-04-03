@@ -1,0 +1,39 @@
+package acm;
+import java.util.*;
+public class try2 {
+        public static void main(String[] args) {
+            Scanner cin = new Scanner(System.in);
+            String string = cin.nextLine();
+            String string1 = cin.nextLine();
+            char mp[] = string.toCharArray();
+            char mmp[] = string1.toCharArray();
+            MininumOperation(mp, mp.length, mmp, mmp.length);
+            cin.close();
+        }
+ 
+        private static void MininumOperation(char[] mp, int length, char[] mmp, int length1) {
+            int distance[][] = new int[100][100];
+            int i, j;
+            for (i = 0; i < length; i++) {
+                distance[i][0] = i;
+            }
+            for (i = 0; i < length1; i++) {
+                distance[0][i] = i;
+            }
+ 
+            for (i = 1; i < length; i++) {
+                for (j = 1; j < length1; j++) {
+                    distance[i][j] = min(distance[i - 1][j] + 1, distance[i][j - 1] + 1, distance[i - 1][j - 1] + (mp[i] == mmp[j]?0:1));
+                }
+            }
+            System.out.println(distance[length - 1][length1 - 1]+1);
+ 
+        }
+ 
+        private static int min(int a, int b, int c) {
+            int d = Math.min(a, b);
+            int minNum = Math.min(d, c);
+            return minNum;
+        }
+ 
+}
