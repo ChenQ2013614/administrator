@@ -6,19 +6,17 @@ package org.fkit.shoppingApp.bean;
 import java.util.Date;
 
 /**
- * @author 罗春龙
+ * @author 亲爱的琼
  * Version 1.0
- * 2018年10月11日
- * 用于封装用户信息
  */
 public class Order {
 	
-	private Integer id;//订单id
-	private String orderNo;//订单编号
-	private Date createDate;//下单时间
-	private Date outDate;//发货时间
-	private Integer userId;//用户id
-	private double money;//订单总金额
+	private Integer id;
+	private String orderNo;
+	private Date createDate;
+	private Date outDate;
+	private Integer userId;
+	private double money;
 	
 	
 	/**
