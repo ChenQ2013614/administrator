@@ -12,10 +12,8 @@ import org.fkit.shoppingApp.bean.User;
 import org.fkit.shoppingApp.util.ConnectionFactory;
 
 /**
- * @author 罗春龙
+ * @author 亲爱的琼
  * Version 1.0
- * 2018年10月11日
- * 持久层，该持久层与用户表交互
  */
 public class UserDao {
 	
