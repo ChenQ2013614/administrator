@@ -19,7 +19,7 @@ import org.fkit.shoppingApp.bean.User;
 import org.fkit.shoppingApp.util.ConnectionFactory;
 
 /**
- * @author 罗春龙 Version 1.0 2018年10月11日 持久层，该持久层与订单表交互
+ * @author 亲爱的琼 Version 1.0 
  */
 public class OrderDao {
 
