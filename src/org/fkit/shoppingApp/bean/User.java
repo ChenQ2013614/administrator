@@ -4,17 +4,15 @@
 package org.fkit.shoppingApp.bean;
 
 /**
- * @author 罗春龙
+ * @author 亲爱的琼
  * Version 1.0
- * 2018年10月11日
- * 用于封装用户信息
  */
 public class User {
 	
-	private Integer id;//用户id
-	private String loginName;//用户登录名
-	private String realName;//真实姓名
-	private String password;//密码
+	private Integer id;
+	private String loginName;
+	private String realName;
+	private String password;
 	/**
 	 * @return the id
 	 */
