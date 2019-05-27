@@ -8,20 +8,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @author 罗春龙
+ * @author 亲爱的琼
  * Version 1.0
- * 2018年10月5日
  */
 public class CookieUtils {
 	
 	
-	//添加Cookie至浏览器
 	public static void addCookie(String cookieName,String value,int age,HttpServletRequest request,HttpServletResponse response) {
 		
-		//先根据Cookie名字获取Cookie信息
 		Cookie  cookie = getCookieByName(cookieName,request);
 		if(cookie == null) {
-		  //说明用户第一次浏览商品或者Cookie过期
+		  
 			cookie = new Cookie(cookieName,value);
 		}
 		//更新Cookie的value值
