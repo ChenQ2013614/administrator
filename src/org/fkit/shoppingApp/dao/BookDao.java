@@ -15,7 +15,7 @@ import org.fkit.shoppingApp.bean.User;
 import org.fkit.shoppingApp.util.ConnectionFactory;
 
 /**
- * @author 罗春龙 Version 1.0 2018年10月11日 持久层，该持久层与书籍表交互
+ * @author 亲爱的琼 Version 1.0 
  */
 public class BookDao {
 
@@ -28,19 +28,13 @@ public class BookDao {
 		PreparedStatement preparedStatement = null;
 		ResultSet rs = null;
 		try {
-			//从连接工厂中获取连接
-			connection = ConnectionFactory.getConnection();
-		
 			
-			// 准备sql语句 此处的 ? 我们称之为占位符 Statement不支持占位符 PreparedStatement支持
-			String sql = "select * from tb_book";
-			// 准备’集装箱‘
+			connection = ConnectionFactory.getConnection();
+		        String sql = "select * from tb_book";
 			preparedStatement = connection.prepareStatement(sql);
-		
-			//进行查询并获取结果集
 			rs = preparedStatement.executeQuery();
 			
-            //遍历结果集并封装的数据
+            
 			List<Book> books = new ArrayList<>();
 		
 			while (rs.next()) {
@@ -59,10 +53,10 @@ public class BookDao {
 			return books;
 
 		} catch (Exception e) {
-			// TODO: handle exception
+			
 			e.printStackTrace();
 		}finally {
-			//关闭连接
+		
 			ConnectionFactory.closeConnection(connection,preparedStatement,rs);
 		
 		}
@@ -70,10 +64,7 @@ public class BookDao {
 		return null;
 	}
 
-	/**
-	 * @param 根据书籍id获取书籍详细信息
-	 * @return
-	 */
+	
 	public Book getBookById(Integer id) {
 		// TODO Auto-generated method stub
 		Connection connection = null;
@@ -84,7 +75,7 @@ public class BookDao {
 			 //获取连接
 			connection = ConnectionFactory.getConnection();
 			
-			// 准备sql语句 此处的 ? 我们称之为占位符 Statement不支持占位符 PreparedStatement支持
+			
 			String sql = "select * from tb_book where id = ?";
 			// 准备’集装箱‘
 			preparedStatement = connection.prepareStatement(sql);
