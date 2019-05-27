@@ -4,9 +4,8 @@
 package org.fkit.shoppingApp.service;
 
 /**
- * @author 罗春龙
+ * @author 亲爱的琼
  * Version 1.0
- * 2018年10月14日
  */
 public class OrderItemService {
 
