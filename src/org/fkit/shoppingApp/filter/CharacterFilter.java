@@ -12,9 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.fkit.shoppingApp.bean.User;
 
-/**
- * 编码拦截器，防止post请求中文乱码
- */
 @WebFilter("/*")
 public class CharacterFilter implements Filter {
 
