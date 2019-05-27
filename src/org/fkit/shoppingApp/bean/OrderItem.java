@@ -4,18 +4,15 @@
 package org.fkit.shoppingApp.bean;
 
 /**
- * @author 罗春龙
+ * @author 亲爱的琼
  * Version 1.0
- * 2018年10月11日
- * 用于封装用户信息
  */
 public class OrderItem {
 	
-      //订单id
 	  private Integer orderId;
-	  //购买数量
+
 	  private Integer buyNum;
-	  //书籍id
+	  
 	  private Integer bookId;
 	/**
 	 * @return the orderId
