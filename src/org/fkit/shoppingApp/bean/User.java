@@ -55,6 +55,7 @@ public class User {
 	public String getPassword() {
 		return password;
 	}
+        //public String getPass()
 	/**
 	 * @param password the password to set
 	 */
