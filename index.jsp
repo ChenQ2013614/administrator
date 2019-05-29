@@ -47,7 +47,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <table style="margin:auto">
                 <tr>
                     <td colspan="2">
-                        图书系统欢迎您！
+                        图书管理系统欢迎您！
                     </td>
                 </tr>
                 <tr>
